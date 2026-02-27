@@ -1,7 +1,8 @@
 # School API — README
 
 ## Description
-Ce TP consiste à développer une API REST simple en utilisant Flask et MySQL. Le but principal est de comprendre comment une application web peut communiquer avec une base de données et exposer des données sous forme d’API. À travers ce TP, j’ai mis en place une petite application capable de gérer des étudiants en effectuant des opérations de consultation, d’ajout et de suppression.
+
+Ce travail pratique (TP) consiste à développer une API REST simple en utilisant Flask et MySQL. Le but principal est de comprendre comment une application web peut communiquer avec une base de données et exposer des données sous forme d’API. À travers ce TP, j’ai mis en place une petite application capable de gérer des étudiants en effectuant des opérations de consultation, d’ajout et de suppression.
 
 ## Organisation des fichiers
 
@@ -20,7 +21,6 @@ Le fonctionnement de l’application est simple. Lorsqu’un client envoie une r
 ## Prérequis
 
 Pour exécuter ce TP, il est nécessaire d’avoir Python installé ainsi qu’un serveur MySQL en fonctionnement. La base de données utilisée doit s’appeler **school_api** et contenir la table des étudiants. Il faut également installer les bibliothèques nécessaires comme Flask et le connecteur MySQL pour Python.
-
 
 ## Conclusion
 
