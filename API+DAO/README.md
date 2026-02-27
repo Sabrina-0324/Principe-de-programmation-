@@ -1,4 +1,4 @@
-# School API — README
+# School API - README
 
 ## Description
 
