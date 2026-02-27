@@ -1,0 +1,127 @@
+# School API — README
+
+## Description
+
+Ce tp est une petite API REST réalisée avec Flask et MySQL.
+Elle permet de gérer des étudiants (voir, ajouter, supprimer).
+
+J’ai réalisé ce tp pour m’entraîner à :
+
+* créer une API avec Flask
+* connecter Python à MySQL
+* organiser le code en plusieurs fichiers (architecture DAO)
+
+---
+
+## Fichiers du ttp
+
+### app.py
+
+C’est le fichier principal.
+Il lance le serveur Flask et contient les routes de l’API (les URLs).
+
+Son rôle :
+
+* recevoir les requêtes HTTP
+* appeler le repository
+* renvoyer les réponses en JSON
+
+---
+
+### config.py
+
+Ce fichier contient les paramètres de connexion à MySQL.
+
+Son rôle :
+
+* stocker l’hôte
+* le port
+* l’utilisateur
+* le mot de passe
+* le nom de la base
+
+Cela permet de centraliser la configuration.
+
+---
+
+### db.py
+
+Ce fichier gère la connexion à la base de données.
+
+Son rôle :
+
+* ouvrir une connexion MySQL
+* gérer les erreurs de connexion
+* retourner la connexion aux autres fichiers
+
+---
+
+### repository.py
+
+C’est la couche qui parle directement à la base de données.
+
+Son rôle :
+
+* exécuter les requêtes SQL
+* récupérer les étudiants
+* ajouter un étudiant
+* supprimer un étudiant
+
+Il utilise la connexion fournie par db.py.
+
+---
+
+## Fonctionnement simple
+
+Quand un client envoie une requête :
+
+Client → Flask (app.py)
+→ repository.py
+→ db.py
+→ MySQL
+→ réponse JSON
+
+---
+
+## Fonctionnalités de l’API
+
+L’API permet de :
+
+* voir tous les étudiants
+* voir un étudiant par ID
+* ajouter un étudiant
+* supprimer un étudiant
+
+---
+
+## Prérequis
+
+Pour faire fonctionner le tp, il faut :
+
+* Python installé
+* MySQL démarré
+* une base de données nommée **school_api**
+* une table **students**
+
+---
+
+
+## Remarque
+
+Le serveur Flask utilisé est un serveur de développement.
+Il est fait pour apprendre et tester en local, pas pour la production.
+
+---
+
+## Objectif du projet
+
+Ce projet m’a permis de comprendre :
+
+* le fonctionnement d’une API REST
+* la communication entre Flask et MySQL
+* l’organisation du code en couches
+* les opérations CRUD de base
+
+---
+
+Projet réalisé dans un but d’apprentissage par un étudiant.
