@@ -2,7 +2,7 @@
 
 ## Description
 
-Ce travail pratique (TP) consiste à développer une API REST simple en utilisant Flask et MySQL. Le but principal est de comprendre comment une application web peut communiquer avec une base de données et exposer des données sous forme d’API. À travers ce TP, j’ai mis en place une petite application capable de gérer des étudiants en effectuant des opérations de consultation, d’ajout et de suppression.
+Ce tp consiste à développer une API REST simple en utilisant Flask et MySQL. Le but principal est de comprendre comment une application web peut communiquer avec une base de données et exposer des données sous forme d’API. À travers ce TP, j’ai mis en place une petite application capable de gérer des étudiants en effectuant des opérations de consultation, d’ajout et de suppression.
 
 ## Organisation des fichiers
 
