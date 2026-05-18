@@ -38,7 +38,7 @@ Mise en place d’une API REST simple avec Flask.
 - `rest.py` → exercices de base  
 - `students/`, `products/` → exemples de ressources  
 
----
+
 
 ### API + DAO (Python + MySQL)
 
@@ -55,7 +55,7 @@ Introduction à l’architecture avec séparation des couches.
 - `repository.py` → requêtes SQL  
 - `config.py` → paramètres de connexion  
 
----
+
 
 ### TP1 - SOAP (Java)
 
@@ -66,7 +66,7 @@ Découverte du protocole SOAP.
 - Tests de requêtes SOAP
 - Compréhension des services web classiques  
 
----
+
 
 ### TP2 - PHP + API REST
 
@@ -77,7 +77,7 @@ Consommation d’une API REST depuis PHP.
 - Affichage dynamique des données
 - Communication entre PHP et API Flask  
 
----
+
 
 ### TP4 - Docker + MySQL + API
 
@@ -97,7 +97,7 @@ docker compose up --build
 - API REST (Flask)
 - Base de données MySQL  
 
----
+
 
 ## Technologies utilisées
 
