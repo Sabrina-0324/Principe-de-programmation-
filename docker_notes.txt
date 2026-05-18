@@ -1,0 +1,105 @@
+Conteneurisation : création d’un Dockerfile pour l’API REST
+
+Dans ce projet, on va conteneuriser notre API Flask en utilisant Docker.
+Le but est d’exécuter l’application dans un environnement isolé avec toutes les dépendances déjà installées.
+
+Exemple de Dockerfile
+FROM python:3.12-slim
+
+WORKDIR /ProjetAPI
+
+RUN pip install flask mysql-connector-python
+
+COPY . .
+
+EXPOSE 5000
+
+CMD ["python","app.py"]
+Description des instructions du Dockerfile
+FROM python:3.12-slim
+
+Cette ligne récupère une image Python légère basée sur Linux avec Python 3.12 préinstallé.
+Elle sert de base pour créer le conteneur.
+
+WORKDIR /ProjetAPI
+
+Définit le dossier principal de travail à l’intérieur du conteneur.
+Toutes les commandes suivantes seront exécutées depuis ce répertoire.
+
+RUN pip install flask mysql-connector-python
+
+Installe les bibliothèques nécessaires au fonctionnement du projet :
+
+Flask pour créer l’API REST
+mysql-connector-python pour communiquer avec MySQL
+COPY . .
+
+Copie tous les fichiers du projet dans le conteneur Docker.
+
+EXPOSE 5000
+
+Précise que l’application utilise le port 5000 pour recevoir les requêtes.
+
+CMD ["python","app.py"]
+
+Commande lancée automatiquement au démarrage du conteneur afin d’exécuter l’API Flask.
+
+Création de l’image Docker
+docker build -t mon_api .
+
+Cette commande construit l’image Docker du projet.
+
+Exécution du conteneur
+docker run -p 4900:5000 mon_api
+
+Le port 4900 de la machine est relié au port 5000 du conteneur.
+
+Publication sur Docker Hub
+
+Connexion au compte Docker :
+
+docker login
+
+Associer un tag à l’image :
+
+docker tag mon_api sabrina0324/mon_api:1
+
+Envoyer l’image sur Docker Hub :
+
+docker push sabrina0324/mon_api:1
+Utilisation de Docker Compose
+
+Le fichier docker-compose.yml permet de démarrer plusieurs services automatiquement, notamment :
+
+l’API Flask
+la base de données MySQL
+services:
+  db:
+    image: mysql:8.0
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ""
+      MYSQL_DATABASE: school_api
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  api:
+    build:
+      context: .
+    restart: unless-stopped
+    depends_on:
+      - db
+    ports:
+      - "5000:5000"
+
+volumes:
+  mysql_data:
+Démarrage des conteneurs
+docker compose up --build
+Vérification de l’API
+
+Après le lancement, l’API est accessible à l’adresse suivante :
+
+http://localhost:5000/students
