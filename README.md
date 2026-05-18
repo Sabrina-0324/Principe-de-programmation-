@@ -4,7 +4,7 @@ Ce dépôt regroupe les supports de cours ainsi que les travaux pratiques du mod
 
 Les dossiers correspondent aux séances de cours (CM) et aux travaux pratiques (TP).
 
----
+
 
 ## Structure du dépôt
 
@@ -20,7 +20,7 @@ Principe-de-programmation-/
 └── docker_notes.txt     # Notes de cours Docker
 ```
 
----
+
 
 ## Contenu des séances
 
