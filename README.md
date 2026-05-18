@@ -4,7 +4,8 @@ Ce dépôt regroupe les supports de cours ainsi que les travaux pratiques du mod
 Les différents dossiers correspondent aux séances de cours (CM) et aux travaux pratiques (TP).
 
 Structure du dépôt
-PP/
+
+Principe-de-programmation-/
 │
 ├── API REST/              # API REST Flask (Python)
 ├── API+DAO/               # API REST avec accès base de données
